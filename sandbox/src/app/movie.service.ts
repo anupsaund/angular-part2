@@ -14,4 +14,8 @@ export class MovieService {
   public getMovies<T>(keyword: string): Observable<T>{
     return this.http.get<T>(`${this.api}&s=${keyword}`)
   }
+
+  public getMovieDetail<T>(movieId: string): Observable<T>{
+    return this.http.get<T>(`${this.api}&i=${movieId}`)
+  }
 }

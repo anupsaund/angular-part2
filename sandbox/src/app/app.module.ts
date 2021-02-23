@@ -8,6 +8,9 @@ import { SearchMovieComponent } from './search-movie/search-movie.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MovieDetailComponent } from './movie-detail/movie-detail.component';
 import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCardModule } from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +23,9 @@ import { FourOhFourComponent } from './four-oh-four/four-oh-four.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]

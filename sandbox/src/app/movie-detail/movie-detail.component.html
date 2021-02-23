@@ -1,6 +1,31 @@
 <p>The ID from the URL for this title is : {{movie_detail_id}}</p>
-
-
+<div style="background-color: ghostwhite;padding:80px;">
+<mat-card style="width:100px" *ngIf="movie_detail">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>{{movie_detail.Title}}</mat-card-title>
+      <mat-card-subtitle>{{movie_detail.Title}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src={{movie_detail.Poster}} alt="">
+    <mat-card-content>
+      <p>
+        {{movie_detail.Plot}}
+      </p>
+    </mat-card-content>
+  </mat-card>
+</div>
 <div>
-    <!--{{move_detail |json}} -->
+    <ng-container *ngIf="movie_detail">
+        <!--{{movie_detail |json}} -->
+        <h3>{{movie_detail.Title}}</h3>
+        <img style="width:100px" 
+            src={{movie_detail.Poster}} />
+
+        <h4>Starring</h4>    
+        <ul style="background-color:black;color:fuchsia;border:1px dashed silver;">
+            <div *ngFor="let actor of actors">
+                <li>{{actor}}</li>
+            </div>
+        </ul>
+    </ng-container>
 </div>
