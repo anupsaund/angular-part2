@@ -29,9 +29,6 @@ export class MovieDetailComponent implements OnInit {
     // hint ?t=tt123213
     // put the response into this.movie_detail
 
-    // In the HTML do something like {{move_detail |json}}
-
-
   }
 
   ngOnInit(): void {
