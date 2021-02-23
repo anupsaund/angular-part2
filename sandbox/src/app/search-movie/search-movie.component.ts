@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MovieService } from '../movie.service';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -12,7 +13,10 @@ export class SearchMovieComponent implements OnInit {
   inputHighlight: string =  'red';
   movies: any;
 
-  constructor(private movieAPI: MovieService) {
+  constructor(
+    private movieAPI: MovieService,
+    private route: ActivatedRoute
+  ) {
 
     this.todos = [
       {id: 1, content: 'eat'},
@@ -20,6 +24,10 @@ export class SearchMovieComponent implements OnInit {
     ]
 
    }
+
+  showMovieDetail(){
+    console.log('Show Detail');
+  }
 
   searchMovie(){
     let searchTerm = 'shrek'; // Get that from an input control.

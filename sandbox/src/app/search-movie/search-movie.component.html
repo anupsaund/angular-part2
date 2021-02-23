@@ -8,25 +8,19 @@ placeholder="Search for a movie..."/>
 <button (click)="searchMovie()">Submit</button>
 
 <div id="results">
-  
   <ng-container *ngIf="movies">
-
     <div *ngFor="let movie of movies">
-      {{ movie.Title }}
+      <button [routerLink]="['/show_detail', movie.imdbID]">{{ movie.Title }} </button>
     </div>
-
-</ng-container>
-
+  </ng-container>
 </div>
-<ng-container *ngIf="todos">
 
+<!--<ng-container *ngIf="todos">
     <div *ngFor="let todo of todos">
       {{ todo.content }}
     </div>
-
 </ng-container>
   
-
 <ul>
     <div *ngFor="let todo of todos">
       <li *ngIf="todo.content !== 'sleep'">
@@ -41,5 +35,5 @@ placeholder="Search for a movie..."/>
         {{ todo.content }}
       </li>
     </ng-container>
-  </ul>
+  </ul> -->
   
